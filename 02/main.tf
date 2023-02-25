@@ -21,10 +21,16 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "s3" {
-
   count  = var.numberofS3bukets
   bucket = "${var.Name}-${count.index}"
+  
 }
+
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.s3.id
+  versioning_configuration {
+    status = "Enabled"
+  }
 
 output "outPutFile" {
 
