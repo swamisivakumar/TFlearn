@@ -17,7 +17,13 @@ resource "aws_s3_bucket" "s3Bucket" {
   }
 
 }
-
+terraform {
+  backend "s3" {
+    bucket = "ssk-tf"
+    key    = "path/Terrafrom.tfstate"
+    region = "us-east-1"
+  }
+}
 
 output "Mybucket" {
   value = aws_s3_bucket.s3Bucket.bucket
