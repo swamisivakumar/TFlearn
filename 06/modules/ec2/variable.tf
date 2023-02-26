@@ -1,0 +1,3 @@
+variable "instace_type" {
+  
+}

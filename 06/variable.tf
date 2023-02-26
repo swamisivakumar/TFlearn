@@ -12,3 +12,7 @@ variable "region" {
 variable "Name" {
 
 }
+
+variable "ec2instanceName" {
+  
+}
