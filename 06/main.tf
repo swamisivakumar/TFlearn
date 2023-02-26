@@ -5,5 +5,6 @@ module "S3Module" {
 
 module "ec2Instance" {
     source = "./modules/ec2"
-     instace_type=var.ec2instanceName  
+     instace_type = var.ec2instanceName  
+     subnet_id = var.subnet_id
 }

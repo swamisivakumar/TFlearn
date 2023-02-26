@@ -16,3 +16,6 @@ variable "Name" {
 variable "ec2instanceName" {
   
 }
+variable "subnet_id" {
+  
+}
